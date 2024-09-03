@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://images.alphacoders.com/131/1319514.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    overflow: auto;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.hamburg {
+    cursor: pointer;
+    color: white;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+    padding: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 50%;
+}
+
+.hamburg:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: slideIn 0.5s forwards;
+    flex-direction: column;
+    text-align: left;
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 0, 0);
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-container .links a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 550;
+    position: relative;
+    transition: color 0.3s linear;
+}
+
+.nav-container .links a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .links a:hover {
+    color: rgb(255, 0, 0);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.white-text {
+    color: white;
+}
+
+.red-text {
+    color: red;
+}
+
+.content .typewriter {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: rgb(255, 0, 0);
+    transform: scale(1.1);
+}
+
+.btn button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn button:hover {
+    background-color: rgb(211, 3, 3);
+    color: white;
+    transform: translateY(-3px);
+}
+/* General styles for sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: red;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-image img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Skills Section */
+.skills-container {
+    text-align: center;
+    padding: 50px 0;
+    background-color:transparent; /* Adjust color to match your theme */
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    background-color: transparent; /* Adjust color to match your theme */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.skill i {
+    font-size: 40px;
+    color: palegoldenrod; /* Adjust color to match your theme */
+    margin-bottom: 10px;
+}
+
+.skill h3 {
+    font-size: 18px;
+    color: red; /* Adjust color to match your theme */
+}
+
+.skill p {
+    font-size: 14px;
+    color: white; /* Adjust color to match your theme */
+}
+/* Projects Section */
+/* Projects Section */
+.projects-container {
+    padding: 50px;
+    text-align: center;
+}
+
+.projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project {
+    width: 100%;
+    max-width: 800px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-image {
+    height: 50%;
+    overflow: hidden;
+    background: transparent;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the container */
+}
+
+.project-info {
+    height: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.project-info p {
+    color: white;
+}
+
+.project:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+
+
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: darkred;
+    transform: translateY(-2px);
+}
+/* About Section */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-image {
+    width: 300px;
+    height: 300px;
+    background-image: url('https://images.alphacoders.com/131/1319514.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.project-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* This ensures the image covers the dimensions */
+}
+
+
+.about-image::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Optional overlay for text readability */
+    border-radius: 50%;
+}
+
+
